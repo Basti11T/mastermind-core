@@ -13,12 +13,14 @@ import org.junit.jupiter.api.Test
 class GameServiceTest {
 
     @Test
-    fun createNewGame() {
+    fun createNewGame_CheckName() {
         val name = "Spiderman"
         val game = GameService.newGame(name)
-
         Assertions.assertEquals(name, game.guesserName)
     }
 
-
+    @Test
+    fun createNewGame_CheckColorCode() {
+        // TODO hier weitermachen und zweimal neues Game erzeugen und prüfen, dass der ColorCode unterschiedlich ist!
+    }
 }

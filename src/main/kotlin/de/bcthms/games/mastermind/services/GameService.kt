@@ -1,5 +1,7 @@
 package de.bcthms.games.mastermind.services
 
+import de.bcthms.games.mastermind.entities.Color
+import de.bcthms.games.mastermind.entities.ColorCode
 import de.bcthms.games.mastermind.entities.Game
 
 /**
@@ -12,7 +14,8 @@ import de.bcthms.games.mastermind.entities.Game
 object GameService {
 
     fun newGame(guesserName: String): Game {
-        return Game(guesserName)
+        val colorCode = ColorCode(Color.RED, Color.BLACK, Color.BLUE, Color.WHITE)
+        return Game(guesserName, colorCode)
     }
 
 }
